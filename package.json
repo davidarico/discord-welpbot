@@ -1,0 +1,11 @@
+{
+  "name": "discord-welpbot",
+  "version": "1.0.0",
+  "description": "Discord bot meant for my own personal use Can be used for any server but config variables need to be set",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
