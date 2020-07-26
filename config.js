@@ -1,4 +1,4 @@
 module.exports = {
-    token: process.env.TOKEN,
+    token: process.env.DISCORD_TOKEN,
     prefix: '!'
 }

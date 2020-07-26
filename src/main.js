@@ -14,9 +14,13 @@ client.on('message', msg => {
     if(msg.content[0] != config.prefix) {
         return
     }
+
+    console.log(msg.content)
+    let users = Array.from(msg.channel.members).map(x => x[0])
+
     let message = msg.content.substr(1)
     let baseCommand = message.split(' ')[0]
-    let response = command[baseCommand] ? command[baseCommand](message.split(' ').splice(1).join(' ')) : 'Bruh I dont know this command'
+    let response = command[baseCommand] ? command[baseCommand](message.split(' ').splice(1).join(' '), users) : 'Bruh I dont know this command'
     msg.channel.send(response)
 
 })

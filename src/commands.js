@@ -1,6 +1,7 @@
 const owoify = require('owoify-js').default
 
 const champs = require('./league-champs')
+const insults = require('./insults')
 
 module.exports = {
     test: () => {
@@ -18,5 +19,8 @@ module.exports = {
     },
     source: () => {
         return 'https://github.com/davidarico/discord-welpbot'
+    },
+    insult: (message, users) => {
+        return `<@!${users[Math.floor(Math.random() * users.length)]}> is a ${insults[Math.floor(Math.random() * insults.length)]} ${insults[Math.floor(Math.random() * insults.length)]}`
     }
 }
