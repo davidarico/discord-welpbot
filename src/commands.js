@@ -7,6 +7,14 @@ module.exports = {
     test: () => {
         return 'test yourself before you wreck yourself'
     },
+    help: function () {
+        let message = 'Current commands are:'
+        let commands = Object.keys(this)
+        for(let i = 0; i < commands.length; i++) {
+            message = `${message}\n${commands[i]}`
+        }
+        return message
+    },
     uwu: (message) => {
         if(!message) {
             return owoify('Master, I am unsure what you want me to say! OvO~~')
@@ -22,5 +30,9 @@ module.exports = {
     },
     insult: (message, users) => {
         return `<@!${users[Math.floor(Math.random() * users.length)]}> is a ${insults[Math.floor(Math.random() * insults.length)]} ${insults[Math.floor(Math.random() * insults.length)]}`
+    },
+    uwuinsult: (message, users) => {
+        let base =  owoify(`is a ${insults[Math.floor(Math.random() * insults.length)]} ${insults[Math.floor(Math.random() * insults.length)]}`)
+        return `<@!${users[Math.floor(Math.random() * users.length)]}> ${base}`
     }
 }
