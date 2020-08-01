@@ -34,5 +34,8 @@ module.exports = {
     uwuinsult: (message, users) => {
         let base =  owoify(`is a ${insults[Math.floor(Math.random() * insults.length)]} ${insults[Math.floor(Math.random() * insults.length)]}`)
         return `<@!${users[Math.floor(Math.random() * users.length)]}> ${base}`
+    },
+    fit: () => {
+        return 'https://www.youtube.com/watch?v=ZSl_dMPdwfA'
     }
 }
