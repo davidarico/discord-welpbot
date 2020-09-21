@@ -3,6 +3,9 @@ const owoify = require('owoify-js').default
 const champs = require('./league-champs')
 const insults = require('./insults')
 
+const fs = require('fs')
+const bible = JSON.parse(fs.readFileSync('./src/bible-quotes.json'))
+
 module.exports = {
     test: () => {
         return 'test yourself before you wreck yourself'
@@ -37,5 +40,8 @@ module.exports = {
     },
     fit: () => {
         return 'https://www.youtube.com/watch?v=ZSl_dMPdwfA'
+    },
+    bible: () => {
+        return bible.bible[Math.floor(Math.random() * bible.bible.length)]
     }
 }
